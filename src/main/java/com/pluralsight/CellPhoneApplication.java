@@ -3,6 +3,7 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class CellPhoneApplication {
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         CellPhone myPhone = new CellPhone();
@@ -36,7 +37,22 @@ public class CellPhoneApplication {
         System.out.print("What is the owner?: ");
         String owner = scanner.nextLine();
 
-        myPhone.setModel(owner);
+        myPhone.setOwner(owner);
+
+        //display it:
+        display(myPhone);
+
+
+        myPhone.dial("555-555-5555");
 
     }
+
+    private static void display(CellPhone phone){
+        System.out.println("-------------------");
+        System.out.println("CELL PHONE [SN:" + phone.getSerialNumber() + "]");
+        System.out.println("  Owner:  " + phone.getOwner());
+        System.out.println("  Model:  " + phone.getModel());
+        System.out.println("  Number: " + phone.getPhoneNumber());
+    }
+
 }

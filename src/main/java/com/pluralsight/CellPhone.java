@@ -56,7 +56,12 @@ public class CellPhone {
         this.owner = owner;
     }
 
-
+public void dial(String phoneNumberToCall){
+    System.out.println(owner + "'s Phone (" + phoneNumber + ") is calling " + phoneNumberToCall);
+    System.out.println("Ring!");
+    System.out.println("Ring!");
+    System.out.println("Ring!");
+}
 
 
 }
