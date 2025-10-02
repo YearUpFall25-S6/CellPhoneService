@@ -45,6 +45,17 @@ public class CellPhoneApplication {
 
         myPhone.dial("555-555-5555");
 
+
+        CellPhone yourPhone = new CellPhone(12345
+                , "pixel"
+                , "fi"
+                , "888-888-8888"
+                , "Hignacio");
+
+        myPhone.dial(yourPhone);
+
+
+        yourPhone.dial(myPhone);
     }
 
     private static void display(CellPhone phone){
